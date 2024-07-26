@@ -1,5 +1,7 @@
-var starting_number = window.prompt("Enter an int above zero");
-starting_number = parseInt(starting_number);
+function getNumber() {
+  var starting_number = window.prompt("Enter an int above zero");
+  starting_number = parseInt(starting_number);
+}
 
 function calculate(starting_number) {
   if (starting_number % 2 === 0) {

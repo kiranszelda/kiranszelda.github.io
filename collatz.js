@@ -19,10 +19,13 @@ function getNumber() {
 
 function calculate(starting_number) {
   if (starting_number % 2 === 0) {
-    starting_number /= 2;
+    var new_number = starting_number / 2;
   } else {
-    starting_number *= 3;
-    starting_number += 1;
+    var new_number = starting_number * 3;
+    var new_number = starting_number + 1;
   }
-  document.getElementById("number").innerHTML = starting_number;
+
+  starting_number = new_number;
+
+  document.getElementById("number").innerHTML = new_number;
 }

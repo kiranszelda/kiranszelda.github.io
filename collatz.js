@@ -9,9 +9,10 @@ function getNumber() {
   // Check if the result is a valid number and greater than zero
   if (isNaN(starting_number) || starting_number <= 0) {
     console.log("The input is not a valid integer above zero.");
+    return null; // Or some other value to indicate failure
   } else {
     console.log("The valid number entered is:", starting_number);
-    // You can perform additional actions with starting_number here
+    return starting_number;
   }
 }
 

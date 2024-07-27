@@ -1,3 +1,5 @@
+var starting_number;
+
 // ChatGPT wrote the following :
 
 function getNumber() {

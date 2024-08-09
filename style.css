@@ -1,0 +1,18 @@
+* {
+    font-family: Times;
+    font-smooth: never;
+    -webkit-font-smoothing: none;
+    color: white;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.link-padding {
+    padding-right: 5px;
+}
+
+body {
+     background-image: url(https://science.nasa.gov/wp-content/uploads/2023/09/427020main-pia12832-c.jpg);
+}

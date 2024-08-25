@@ -11,7 +11,7 @@ function change_motivation(){
     if(motivation_select == 4){ motivation = "Wear fun clothes before you die working out, this puts the \"fun\" in funeral" }
     if(motivation_select == 5){ motivation = "Steroids are harmless and will help you in your workout" }
     if(motivation_select == 6){ motivation = "If you're running and you find a dangerous area, run in there. More velocity means more fast; means bullets in your back means faster" }
-    if(motivation_select == 7){ motivation = "If you're reading this, DROP DOWN AND GIVE ME 100" }
+    if(motivation_select == 7){ motivation = "If you're reading this it means you aren't working out, remember no breaks. ever." }
     if(motivation_select == 8){ motivation = "Beer has a lot of calories, drink vodka instead" }
     if(motivation_select == 9){ motivation = "If you ever feel like quitting, do it. You clearly aren't motivated so you deserve to fail" }
 

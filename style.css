@@ -54,10 +54,3 @@ main > div {
   border-right: 3px solid #b4befe;
   padding: 5%;
 }
-
-footer {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translate(-50%, -100%);
-}

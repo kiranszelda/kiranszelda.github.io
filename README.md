@@ -1,4 +1,8 @@
 # kiranszelda.github.io
+
 personal website
 
-<a href="https://kiranszelda.github.io"> Link to Website </a>
+To run the host.sh file do ./host.sh ip port
+Ex: ./host.sh localhost 3000
+
+[Link to Website](https://kiranszelda.github.io)

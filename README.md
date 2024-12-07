@@ -1,5 +1,5 @@
 # kiranszelda.github.io
 
-personal website
+personal website, where I'll host stuff
 
 [Link to Website](https://kiranszelda.github.io)

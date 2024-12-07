@@ -11,7 +11,7 @@ body {
   color: #cdd6f4;
   font-family: sans-serif;
   text-align: center;
-  font-size: 1vh;
+  font-size: 1.25vh;
 }
 
 main {
@@ -28,24 +28,6 @@ main {
 main > div {
   border-top: 3px solid #b4befe;
   border-bottom: 3px solid #b4befe;
-}
-
-.left-section {
-  min-width: 25%;
-  border-left: 3px solid #b4befe;
-  border-right: 2px dashed #b4befe;
-}
-
-.main-section {
-  min-width: 50%;
-  border-left: 2px dashed #b4befe;
-  border-right: 2px dashed #b4befe;
-}
-
-.right-section {
-  min-width: calc(25% - 18px);
-  border-left: 2px dashed #b4befe;
-  border-right: 3px solid #b4befe;
 }
 
 a:link {

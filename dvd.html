@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kiran's Website</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Kiran's Blog" />
+    <meta name="keywords" content="Kiran, kiranszelda" />
+    <meta name="author" content="kiranszelda" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      #container {
+        width: 1200px;
+        height: 600px;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -10%);
+        position: relative;
+        background: black;
+      }
+      #animate {
+        width: 50px;
+        height: 50px;
+        left: 575px;
+        top: 275px;
+        position: absolute;
+        background-color: violet;
+      }
+    </style>
+  </head>
+  <body>
+    <span>Width: </span
+    ><input
+      type="number"
+      id="widthInput"
+      min="300"
+      value="1200"
+      style="width: 5%"
+    />
+    <span>Height: </span
+    ><input
+      type="number"
+      id="heightInput"
+      min="300"
+      value="600"
+      style="width: 5%"
+    />
+    <span>Color: </span><input type="color" id="colorInput" value="#ee82ee" />
+
+    <br />
+    <span
+      ><button onclick="start()">Start</button>
+      <button onclick="reset()">Reset</button></span
+    >
+
+    <div id="container">
+      <div id="cornerHit" style="display: none">
+        <span>HIT THE CORNER!!!!!!!!</span>
+      </div>
+      <div id="animate"></div>
+    </div>
+
+    <script>
+      let playing = false;
+      let posX = Number(document.getElementById("widthInput").value) / 2 + 25;
+      let xDirection = "right";
+      let posY = Number(document.getElementById("heightInput").value) / 2 + 25;
+      let yDirection = "down";
+      let widthInput = Number(document.getElementById("widthInput").value);
+      let heightInput = Number(document.getElementById("heightInput").value);
+
+      function updateDimensions() {
+        document.getElementById("container").style.width =
+          document.getElementById("widthInput").value + "px";
+        document.getElementById("container").style.height =
+          document.getElementById("heightInput").value + "px";
+        widthInput = Number(document.getElementById("widthInput").value);
+        heightInput = Number(document.getElementById("heightInput").value);
+        document.getElementById("animate").style.backgroundColor =
+          document.getElementById("colorInput").value;
+        posX = widthInput / 2 - 25;
+        posY = heightInput / 2 - 25;
+        xDirection = "right";
+        yDirection = "down";
+      }
+
+      updateDimensions();
+
+      function reset() {
+        playing = false;
+        updateDimensions();
+      }
+      function start() {
+        if (!playing) {
+          let id = null;
+          playing = true;
+
+          updateDimensions();
+          const elem = document.getElementById("animate");
+          elem.style.left = posX + "px";
+          elem.style.top = posY + "px";
+          clearInterval(id);
+          id = setInterval(frame, 5);
+          function frame() {
+            if (!playing) {
+              clearInterval(id);
+            } else {
+              if (posX >= widthInput - 50) {
+                xDirection = "left";
+              } else if (posX <= 0) {
+                xDirection = "right";
+              }
+
+              if (posY >= heightInput - 50) {
+                yDirection = "up";
+                document.getElementById("cornerHit").style.display = "none";
+              } else if (posY <= 0) {
+                yDirection = "down";
+                document.getElementById("cornerHit").style.display = "none";
+              }
+
+              if (
+                (posX >= widthInput - 50 && posY >= heightInput - 50) ||
+                (posX <= 0 && posY <= 0) ||
+                (posX >= widthInput - 50 && posY <= 0) ||
+                (posX <= 0 && posY >= heightInput - 50)
+              ) {
+                document.getElementById("cornerHit").style.display = "block";
+              }
+
+              if (xDirection == "right") {
+                posX++;
+              } else {
+                posX--;
+              }
+
+              if (yDirection == "down") {
+                posY++;
+              } else {
+                posY--;
+              }
+              elem.style.left = posX + "px";
+              elem.style.top = posY + "px";
+            }
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

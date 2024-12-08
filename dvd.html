@@ -30,16 +30,16 @@
     </style>
   </head>
   <body>
-    <span>Width: </span
-    ><input
+    <span>Width: </span>
+    <input
       type="number"
       id="widthInput"
       min="300"
       value="1200"
       style="width: 5%"
     />
-    <span>Height: </span
-    ><input
+    <span>Height: </span>
+    <input
       type="number"
       id="heightInput"
       min="300"
@@ -53,13 +53,17 @@
       ><button onclick="start()">Start</button>
       <button onclick="reset()">Reset</button></span
     >
-
+    <div id="cornerHit" style="display: none">
+      <h2>HIT THE CORNER!!!!!!!!</h2>
+    </div>
     <div id="container">
-      <div id="cornerHit" style="display: none">
-        <span>HIT THE CORNER!!!!!!!!</span>
-      </div>
       <div id="animate"></div>
     </div>
+
+    <footer id="footerInfo">
+      <hr />
+      <span><a href="index.html">Home</a> <a href="dvd.html">DVD</a></span>
+    </footer>
 
     <script>
       let playing = false;
@@ -83,6 +87,7 @@
         posY = heightInput / 2 - 25;
         xDirection = "right";
         yDirection = "down";
+        document.getElementById("cornerHit").style.display = "none";
       }
 
       updateDimensions();
